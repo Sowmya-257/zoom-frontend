@@ -168,10 +168,10 @@ export default function DashboardPage() {
 
             <div className="flex justify-end mt-4 pt-2">
               <button
-                onClick={() => setToast({ message: 'Viewing subscription plan details...', type: 'info' })}
+                onClick={() => router.push('/pricing')}
                 className="text-xs font-semibold text-[#0B5CFF] hover:underline cursor-pointer"
               >
-                View Plan Details
+                Current Plan: {userPlan}
               </button>
             </div>
           </div>
@@ -316,17 +316,11 @@ export default function DashboardPage() {
           {/* Card 4: Meetings Card (Bottom Right) */}
           <div className="lg:col-span-5 bg-white border border-[#E4E7EB] rounded-2xl p-6 shadow-xs min-h-[300px] flex flex-col justify-between">
             <div>
-              {/* Header with Title & Visit Meetings link */}
+              {/* Header with Title */}
               <div className="flex items-center justify-between pb-3">
                 <h2 className="text-lg font-bold text-gray-900">
                   Meetings
                 </h2>
-                <button
-                  onClick={() => setIsScheduleOpen(true)}
-                  className="text-xs font-semibold text-[#0B5CFF] hover:underline cursor-pointer"
-                >
-                  Visit Meetings
-                </button>
               </div>
 
               {/* Upcoming List or No Upcoming Meetings banner */}
